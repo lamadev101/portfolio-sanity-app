@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Russo+One&display=swap');
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth !important;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button{
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.title{
+  font-family: 'Russo One', sans-serif;
+  font-size: 36px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 6px;
+  span{
+    color: teal;
+  }
+  .line{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div{
+      width: 80px;
+      height: .3rem;
+      margin-bottom: 1rem;
+    &:first-child{
+      background: teal;;
+    }
+    &:last-child{
+      background: orange;
+    }
+  }}
+}
+// Navbar
+.navbar{
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  border-bottom: 1px solid lightgray;
+  background: white;
+  z-index: 999;
+
+  .navLinks{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    a{
+      font-size: 18px;
+      &:hover{
+        color: orange;
+      }
+    }
+    .icon{
+      font-size: 24px;
+      cursor: pointer;
+      &:first-child{
+        font-size: 18px;
+      }
+    }
+    button{
+      background: linear-gradient(to bottom left, cyan, teal);
+      padding:.5rem .8rem;
+      color: white;
+    }
+  }
+}
+
+// Intro Section
+.intro{
+  height: 90vh;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  .left{
+    flex: 1;
+    .name{
+      color: teal;
+      font-size: 36px;
+      font-weight: 800;
+    }
+
+    p{
+      color: #333;
+    }
+    div{
+      display: flex;
+      gap: 2rem;
+      button{
+        border-radius: 1rem;
+        padding: 0.5rem 1.5rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        &:first-child{
+          border: 1px solid limegreen;
+          color: limegreen;
+          &:hover{
+            background: limegreen;
+            color: white;
+          }
+        }
+        &:last-child{
+          border: 1px solid orange;
+          color: orange;
+          &:hover{
+            background: orange;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  .right{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .img{
+      background: linear-gradient(to bottom left, rgba(4, 200, 235, 0.677), teal);
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+  }
+}
+
+//Works
+.works{
+  margin-top: 3rem;
+  .btns, button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btns{
+    gap: 1rem;
+    button{
+      gap:.5rem;
+      padding: .5rem 1rem;
+      border-radius: 1rem;
+      
+      &:first-child{
+        border: .002rem solid teal;
+        color: teal;
+        &:hover{
+          background: teal;
+        }
+      }
+      &:nth-child(2){
+        border: .002rem solid #111;
+        color: #111;
+        &:hover{
+          background: #111;
+        }
+      }
+      &:nth-child(3){
+        border: .002rem solid red;
+        color: red;
+        &:hover{
+          background: red;
+        }
+      }
+      &:last-child{
+        border: .002rem solid goldenrod;
+        color: goldenrod;
+        &:hover{
+          background: goldenrod;
+        }
+      }
+      &:hover{
+        color: white;
+      }
+    }
+    .active1, .active2, .active3, .active4{
+      color: white !important;
+    }
+    .active1{
+      background: teal;
+    }
+    .active2{
+      background: #111;
+    }
+    .active3{
+      background: red;
+    }
+    .active4{
+      background: goldenrod;
+    }
+  }
+  .cardItems{
+    padding: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  
+    .card{
+      padding:.2rem;
+      width: 48%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 1rem;
+  
+      .image{
+        padding: 0.5rem;
+        height: 300px;
+        overflow: hidden;
+        img{
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: all .5s ease-in-out;
+          &:hover{
+            transform: scale(1.1);
+
+          }
+        }
+      }
+      .details{
+        padding:.5rem 1rem;
+        background: #faf6f6c8;
+        h1{
+          margin: 0;
+          color: teal;
+          font-size: 24px;
+          text-align: center;
+        }
+        p{
+          margin-top: 0;
+          margin-bottom: 0.5px;
+        }
+        div{
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 0.5rem;
+          a{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: bold;
+            &:first-child{
+              color: teal;
+            }
+            &:last-child{
+              color: rgb(12, 12, 194);
+            }
+            &:hover{
+              color: crimson
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Skills
+.skills{
+  height: 90vh;
+  .cards, .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cards{
+    gap: 1rem;
+    
+    .card{
+      flex-direction: column;
+      width: 30%;
+      border-radius: 10px;
+      border-bottom: .8rem solid teal;
+      box-shadow: 0 0 5px lightgray;
+      h3,p,h5{
+        text-align: center;
+        margin: 0;
+      }
+      h5{
+        margin-top: 1rem;
+        text-decoration: underline;
+      }
+
+    }
+  }
+}
+
+
+// Contact
+.contact, .phoneMail, .phone, .mail{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact{
+  background: linear-gradient(to bottom right, #0af4f436, #f1b0373d ), url(https://images.pexels.com/photos/7108/notebook-computer-chill-relax.jpg?auto=compress&cs=tinysrgb&w=600&lazy=load) center fixed;
+  background-size: cover;
+  height: 50vh;
+  flex-direction: column;
+
+  .phoneMail{
+    gap: 3rem;
+    span{
+      gap: 1rem;
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .phone{
+      color: teal;
+      border-bottom: 2px solid orange;
+    }
+    .mail{
+      color:orange;
+      border-bottom: 2px solid teal;
+    }
+  }
+}
+
+// Footer 
+footer{
+  padding: 2rem;
+  background: #f5f5f5;
+  border-top: 1px solid lightgray;
+  p{
+    text-align: center;
+  }
+}
+
+.goUp{
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  cursor: pointer;
+  border: 1px solid orange;  
+  padding: 2px 5px;
+  border-radius: 5px;
+  .icon{
+    color: orange;
+    font-size: 24px;
+    &:hover{
+      color: white;
+    }
+  }
+  &:hover{
+    background: orange;
+  }
+}
+
+// Dark theme
+.darkTheme{
+  background: rgb(24, 24, 24);
+  color: #eee;
+  .navbar, footer{
+    background: rgb(16, 16, 16);
+    color: #eee;
+    border: none;
+    .logo{
+      mix-blend-mode:darken;
+    }
+  }
+  .intro{
+    .left{
+      span{
+        color: teal;
+      }
+      .name{
+        color: #eee;
+      }
+      p{
+        color: #e2e0e0;
+      }
+    }
+  }
+  .works{
+    .btns{
+      button{
+        &:nth-child(2){
+          border: 1px solid white;
+          color: white;
+        }
+      }
+    }
+    .cardItems{
+      .card, .details{
+        background: #000;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar{
+  display: none;
+}
+
+
+// Mobile Responsiveness
+@media (max-width: 477px){
+  .navbar{
+    .navLinks{
+      a{
+        display: none;
+      }
+    }
+  }
+  .intro{
+    flex-direction: column-reverse;
+    margin-bottom: 3rem;
+    .left{
+      text-align: center;
+      .name{
+        line-height: 36px;
+      }
+      p{
+        font-size: 14px;
+      }
+      div{
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    .right{
+      .img{
+        width: 300px;
+        height: 300px;
+        border-radius: 1rem;
+      }
+    }
+  }
+
+  .skills{
+    height: auto;
+    .cards{
+      flex-direction: column;
+      .card{
+        width: 90%;
+        border-bottom: .3rem solid teal;
+      }
+    }
+  }
+
+  .works{
+    .btns{
+      button{
+        flex-direction: column;
+        gap: 0.1rem;
+        font-size: 12px;
+        border-radius: .1rem;
+        padding: .2rem .5rem;
+      }
+    }
+    .cardItems{
+      flex-direction: column;
+      padding: 0;
+      .card{
+        width: 100%;
+        .details{
+          h1{
+            font-size: 18px;
+          }
+          p{
+            font-size: 14px;
+          }
+          div{
+            a{
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contact{
+    height: 30vh;
+    margin-top: 3rem;
+    h1{
+      text-align: center;
+      line-height: 2rem;
+    }
+    .phoneMail{
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+}

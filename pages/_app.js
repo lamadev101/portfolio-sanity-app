@@ -1,7 +1,12 @@
-import '../styles/globals.css'
+import ProvideContext from '../components/stateContext'
+import '../styles/globals.scss'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <ProvideContext>
+      <Component {...pageProps} />
+    </ProvideContext>
+  )
 }
 
 export default MyApp
